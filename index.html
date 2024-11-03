@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio - Denis Chávez</title>
+    <link rel="stylesheet" href="./less/main.less">
+  </head>
+  <body>
+      {{> header}}
+      <main>
+        <section id="biography" class="biografia">
+            <h2>Acerca de mí</h2>
+             <div class="info-bio">
+                 <img src="https://avatar.iran.liara.run/public/5" alt="Foto de perfil personal">
+                 <p>Hola, soy <span>Denis Chávez</span> estudiante de Ingeniería en Ciencias de la Computación en la Universidad Católica de Honduras. Actualmente estoy en mi cuarto año de estudio y mi interés por esta carrera se centra en seguir aprendiendo nuevas tecnologías que me ayuden e crear un sinfín de cosas, desde aplicaciones móviles hasta sitios webs dinámicos y atráctivos. Uno de mis pasatiempos favoritos es aprender nuevas tecnologías e implementar lo aprendido en proyectos.</p>
+             </div>
+        </section>
+        <section id="projects" class="proyectos">
+         <h2 class="titulo">Proyectos</h2>
+             <div class="carouselContainer">
+                 <div class="carouselItem">
+                     <h3>Cayena Wings</h3>
+                     <div class="carouselInfo">
+                         <img src="./assets/ImageCayena.png" alt="Imagen del proyecto restaurante">
+                         <div class="info">
+                             <p>Cayena Wings es una empresa 100% hondureña que nace en el corazón del país, el altiplano central de Honduras; Siguatepeque.
+                                 Nos caracterizamos por dar una atención de la más alta calidad, enfocándonos en la satisfacción del cliente y su comodidad.</p>
+                                 <div class="techs">
+                                     <img src="https://cdn-icons-png.freepik.com/256/15474/15474213.png?semt=ais_hybrid" alt="Icono de html">
+                                     <img src="https://cdn-icons-png.freepik.com/256/11516/11516361.png?semt=ais_hybrid" alt="Icono de css">
+                                     <img src="https://cdn-icons-png.freepik.com/256/5968/5968292.png?semt=ais_hybrid" alt="Icono de javascript">
+                                 </div>
+                             <a href="https://realeoncito.github.io/CayenaWings/conocenos.html" target="_blank">Demo</a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </section>
+        <section id="contact" class="contactame">
+         <h2>Contáctame</h2>
+         <form action="index.html">
+             <label for="nombreCompleto">Name</label>
+             <input type="text" name="nombreCompleto" id="nombreCompleto">
+             <label for="correo">Correo</label>
+             <input type="email" name="correo" id="correo" placeholder="tucorreo@ejemplo.com">
+             <label for="comments">Comentarios</label>
+             <textarea name="comments" id="comments" cols="30" rows="6" placeholder="Escribe tus comentarios aquí."></textarea>
+         </form>
+         <button>Enviar</button>
+        </section>
+     </main>
+     {{> footer}}
+  </body>
+</html>

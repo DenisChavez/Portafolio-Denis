@@ -1,0 +1,180 @@
+@background-color-black: #000;
+@background-color-white: #fff;
+@text-color-white: #fff;
+@text-color-black: #000;
+
+@import 'header.less';
+@import 'footer.less';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100dvh;
+    background-color: @background-color-black;
+    color: @text-color-white;
+
+    main {
+        width: 85%;
+        margin: 20px auto;
+
+        .biografia,
+        .proyectos {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                font-size: 2.2rem;
+                margin-left: 18px;
+            }
+
+            .info-bio,
+            .carouselInfo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 0px;
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                    margin-right: 30px;
+                }
+
+                p {
+                    text-align: justify;
+                    line-height: 28px;
+                    font-size: 1.2rem;
+
+                    span {
+                        font-weight: bold;
+                        color: rgb(247, 245, 131);
+                        text-shadow: 0px 0px 18px @text-color-white;
+                    }
+                }
+            }
+        }
+
+        .proyectos {
+            .carouselContainer {
+                border: 1px solid @text-color-white;
+                border-radius: 10px;
+                padding: 20px;
+                margin-top: 14px;
+
+                h3 {
+                    color: rgb(247, 245, 131);
+                    font-size: 1.4rem;
+                    letter-spacing: 2px;
+                }
+
+                .carouselInfo {
+                    img {
+                        width: auto;
+                        object-fit: cover;
+                    }
+
+                    .info {
+                        width: 700px;
+                        height: auto;
+
+                        p {
+                            text-align: justify;
+                            line-height: 32px;
+                        }
+
+                        .techs {
+                            margin-top: 24px;
+
+                            img {
+                                width: 36px;
+                                height: 36px;
+                            }
+                        }
+
+                        a {
+                            display: block;
+                            position: absolute;
+                            right: 150px;
+                            width: 100px;
+                            border-radius: 12px;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 12px;
+                            color: rgb(247, 245, 131);
+                            border: 2px solid rgb(247, 245, 131);
+                            transition: background-color 0.4s ease;
+
+                            &:hover {
+                                color: #000;
+                                background-color: rgb(247, 245, 131);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contactame {
+            padding: 20px;
+            border: 1px solid rgb(247, 245, 131);
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px auto;
+
+            h2 {
+                font-size: 24px;
+                color: @text-color-white;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: @text-color-white;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                transition: border-color 0.3s;
+
+                &:focus {
+                    border-color: #66afe9;
+                    outline: none;
+                }
+            }
+
+            button {
+                background-color: rgb(247, 245, 131);
+                color: @text-color-black;
+                padding: 10px 15px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 18px;
+                width: 100%;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: rgb(247, 245, 80);
+                }
+            }
+        }
+
+    }
+}
